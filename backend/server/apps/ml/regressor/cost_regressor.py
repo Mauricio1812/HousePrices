@@ -7,7 +7,7 @@ class CostRegressor:
     def __init__(self):
         path_to_ML = "../../pre_trained/"
         self.model = pickle.load(open(path_to_ML + 'HousePrice_model.sav','rb'))
-        self.values_fill_missing =  pickle.load(open(path_to_ML + "train_mode.p", "rb"))
+        #self.values_fill_missing =  pickle.load(open(path_to_ML + "train_mode.p", "rb"))
         #self.encoders = joblib.load(path_to_artifacts + "encoders.joblib")
 
     def preprocessing(self, input_data):
@@ -107,7 +107,7 @@ class CostRegressor:
         # JSON to pandas DataFrame
         input_data = pd.DataFrame(input_data, index=[0])
         # fill missing values
-        input_data.fillna(self.values_fill_missing)
+        #input_data.fillna(self.values_fill_missing)
 
         for c in ['FireplaceQu', 'BsmtQual', 'BsmtCond', 'GarageQual', 'GarageCond', 
             'ExterQual', 'ExterCond','HeatingQC', 'KitchenQual', 'BsmtFinType1', 
