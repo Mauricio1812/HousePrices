@@ -14,7 +14,7 @@ class MLTests(TestCase):
         algorithm_object = CostRegressor()
         algorithm_name = "cost regressor"
         algorithm_status = "production"
-        algorithm_version = "0.0.2"
+        algorithm_version = "0.0.3"
         algorithm_owner = "Mauricio"
         algorithm_description = "Cost Regressor with simple pre- and post-processing"
         algorithm_code = inspect.getsource(CostRegressor)
