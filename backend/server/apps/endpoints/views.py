@@ -72,12 +72,12 @@ class MLRequestViewSet(
     queryset = MLRequest.objects.all()
 
 class PredictView(views.APIView):
-    def post(self, request, endpoint_name, format=None):
+    def post(self, request, format=None):
 
         algorithm_status = self.request.query_params.get("status", "production")
         algorithm_version = self.request.query_params.get("version")
 
-        algs = MLAlgorithm.objects.filter(parent_endpoint__name = endpoint_name, status__status = algorithm_status, status__active=True)
+        algs = MLAlgorithm.objects.filter(parent_endpoint__name = "regressor", status__status = algorithm_status, status__active=True)
 
         if algorithm_version is not None:
             algs = algs.filter(version = algorithm_version)

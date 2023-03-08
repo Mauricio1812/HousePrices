@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2cf5b4a2-dd1b-442c-9ab4-406c705a6a25/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/housepricesML",
+    "appService.deploySubpath": "."
+}
